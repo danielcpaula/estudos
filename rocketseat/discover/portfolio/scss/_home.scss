@@ -1,0 +1,187 @@
+.container {
+  @include flex(row, flex-start, space-between);
+  .info-pessoais {
+    .profile {
+      background-color: $bg-cards;
+      width: 100%;
+      max-width: 34.8rem;
+      height: 29.2rem;
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .img-perfil {
+          padding-top: 3.2rem;
+        img {
+          width: 12.8rem;
+          height: 12.8rem;
+          border-radius: 100%;
+          border: 0.2rem solid #00FF00;
+        }
+      }
+      .informacao {
+        margin-top: 3rem;
+        h2 {
+          font-size: 2.3rem;
+          font-weight: 700;
+          line-height: 2.9rem;
+          color: $text-color;
+          text-align: center;
+        }
+        p {
+          margin-top: 1rem;
+          font-weight: 300;
+          font-size: 1.3rem;
+          line-height: 1.6rem;
+          color: $text-color;
+          text-align: center;
+        }
+      }
+    }
+    .links {
+      margin-top: 30px;
+      background-color: $bg-cards;
+      width: 100%;
+      max-width: 34.8rem;
+      height: 34.8rem;
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+      ul {
+        padding-top: 3rem;
+        padding-left: 4rem;
+        li {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 2rem;
+          .info {
+            display: flex;
+            align-items: center;
+            img {
+              max-width: 100%;
+            }
+            .text {
+              margin-left: 2rem;
+              p {
+                font-size: 1.2rem;
+                color: $text-color;
+                line-height: 1.6rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .technologies {
+      margin-top: 3rem;
+      background-color: $bg-cards;
+      width: 100%;
+      max-width: 34.8rem;
+      height: 20.8rem;
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 2rem;
+      h2 {
+        padding-top: 3rem;
+        padding-left: 2rem;
+        font-size: 2rem;
+        font-weight: 700;
+        color: $text-color;
+        line-height: 2.5rem;
+      }
+      .list-tecnologies {
+        margin-left: 3rem;
+        margin-top: 2rem;
+        width: 100%;
+        max-width: 28.8rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        .tecnologie {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 8.6rem;
+          height: 2.4rem;
+          background: $bg-techs;
+          border-radius: 3rem;
+        }
+      }
+    }
+      
+    .experiences {
+      margin-top: 30px;
+      background-color: $bg-cards;
+      width: 348px;
+      height: 349px;
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+      h2 {
+        padding-top: 3rem;
+        padding-left: 2rem;
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+      .experience {
+        
+      }
+    }
+  
+    .education {
+      margin-top: 30px;
+      background-color: $bg-cards;
+      width: 348px;
+      height: 352px;
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+    }
+  }
+  
+  .projetos {
+    margin-left: 6rem;
+    width: 100%;
+    width: 95.2rem;
+    .my-projects {
+      .title {
+        background-color: $bg-cards;
+        width: 95.2rem;
+        height: 8.6rem;
+        border-radius: 2rem;
+        box-shadow: 2px 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+      }
+      .post-projects {
+        margin-top: 3.1rem;
+        display: flex;
+        justify-content: space-between;
+        .post {
+          background-color: $bg-cards;
+          width: 46.1rem;
+          height: 18.6rem;
+          border-radius: 2rem;
+          box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+    .recent-posts {
+      margin-top: 3rem;
+      .title {
+        background-color: $bg-cards;
+        width: 95.2rem;
+        height: 8.6rem;
+        border-radius: 2rem;
+        box-shadow: 2px 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+      }
+      .post {
+        margin-top: 3rem;
+        background-color: $bg-cards;
+        width: 95.2rem;
+        height: 20.1rem;
+        border-radius: 2rem;
+        box-shadow: 2px 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
