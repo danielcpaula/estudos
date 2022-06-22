@@ -1,0 +1,137 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --nav-text-color: #C4C4CC;
+  --nav-text-color-scl: #FFFFFF;
+  --text-color: #E1E1E6;
+  --ff-primary: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bg1 {
+  background: url(assets/mountains-universe-1.png);
+}
+
+.bg2 {
+  background: url(assets/mountains-universe02.png);
+}
+
+.bg3 {
+  background: url(assets/mountains-universe-3.png);
+}
+
+.bg1, .bg2, .bg3 {
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  max-width: 128rem;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding-top: 4rem;
+  gap: 3.2rem;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 3.2rem;
+}
+
+header ul li {
+  font-size: 2.1rem;
+  line-height: 2.2rem;
+}
+
+header ul li a {
+  color: var(--nav-text-color)
+}
+
+header ul li a.active {
+  color: var(--nav-text-color-scl);
+  font-weight: 700;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 17.2rem;
+  gap:2.4rem
+}
+
+.home h1 {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 125%;
+  color: var(--text-color);
+}
+
+.home button {
+  color: var(--nav-text-color-scl);
+  padding: 12px 32px;    
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+
+.home button:hover{
+  color: var(--nav-text-color-scl);
+  background: #FFFFFF;
+  color: #02799D;
+  font-weight: 700;
+}
+
+.universo {
+  margin-top: 6.3rem;
+}
+
+.universo h1 {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 125%;
+  color: var(--text-color);
+}
+
+.universo p {
+  margin-top: 1.6rem;
+  font-size: 1.8rem;
+  line-height: 160%;
+  color: var(--text-color);
+  width: 64.8rem;
+}
+
+.exploracao {
+  margin-top: 18.9rem;
+}
+
+.exploracao p {
+  width: 64.8rem;
+  color: var(--nav-text-color);
+  font-size: 1.8rem;
+  line-height: 160%;
+}
+
+

@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #FFFFFF;
+  --bg-color-dark: #000000;
+  --bg-color-btn: #E1E1E6;
+  --bg-color-btn-slc: #02799D;
+
+  --tx-color: #29292E;
+
+  --icon-color: #323238;
+  --icon-color-slc: #FFFFFF;
+
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  display: grid;
+  align-items: center;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 2.4rem;
+}
+
+.container {
+display: flex;
+justify-self: center;
+gap: 12.3rem;
+}
+
+section.left-area {
+  display: grid;
+  align-self: center;
+  gap: 1.7rem;
+}
+
+section.left-area .timer span {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 12.6rem;
+  text-align: center;
+  text-transform: uppercase;
+  height: 1.1rem;
+}
+
+section.left-area .controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.right-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+section.right-area button {
+padding: 4.8rem;
+border-radius: 2.4rem;
+background-color: var(--bg-color-btn);
+}
+
+section.right-area button:hover, 
+section.right-area button:hover svg path {
+  background-color: var(--bg-color-btn-slc);
+  fill: var(--icon-color-slc);
+}
+
+.hide {
+  display: none;
+}
+
+footer {
+  align-self: end;
+  justify-self: end;
+}
+
+footer button svg path {
+  fill: var(--icon-color);
+}
+

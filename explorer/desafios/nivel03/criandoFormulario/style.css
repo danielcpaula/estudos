@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EFEFEF;
+  font-family: 'Poppins', sans-serif;
+}
+
+body::before {
+  content: '';
+  width: 100%;
+  height: 436px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #535971;
+}
+
+.page {
+  width: 750px;
+  margin: 0 auto;
+}
+
+header h1 {
+  margin-top: 140px;
+  font-size: 48px;
+  line-height: 60px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+header p {
+  margin-top: 18px;
+  width: 417px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+form {
+  background-color: #fff;
+  margin-top: 58px;
+  min-height: 300px;
+  border-radius: 8px 8px 0 0;
+  padding: 64px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+form fieldset {
+  border: none;
+}
+
+form fieldset .fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+form fieldset .fieldset-wrapper legend {
+  font-family: 'Staatliches';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #535971;
+  width: 100%;
+  border-bottom: 1px solid #E6E6F0;
+  padding-bottom: 16px;
+  text-transform: uppercase;
+}
+
+
+form fieldset .fieldset-wrapper .input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+form fieldset .fieldset-wrapper .full-name {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+form fieldset .fieldset-wrapper .full-name .input-wrapper {
+  width: 50%;
+}
+
+form fieldset .fieldset-wrapper .input-wrapper label {
+font-size: 14px;
+line-height: 24px;
+color: #4E4958;
+margin-bottom: 8px;
+}
+
+form fieldset .fieldset-wrapper .input-wrapper label span {
+  margin-left: 7px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #C1BCCC;
+}
+
+form fieldset .fieldset-wrapper .input-wrapper input {
+  background: #FAFAFC;
+  height: 56px;
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+  padding: 0 24px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #6C6A71;
+}
+
+form fieldset .fieldset-wrapper .input-wrapper input:invalid {
+  border: 2px solid red;
+}
+
+form fieldset .fieldset-wrapper h2 {
+  font-family: 'Staatliches';
+  font-size: 20px;
+  line-height: 34px;
+  color: #535971;
+}
+
+form fieldset .fieldset-wrapper .col-3 {
+  display: flex;
+  gap: 16px;
+}
+
+form fieldset .fieldset-wrapper .col-3 > div:nth-child(1) {
+  width: 100%;
+}
+
+footer {
+height: 160px;
+background: #535971;
+border-radius: 0px 0px 20px 20px;
+padding: 52px 71px;
+display: flex;
+flex-direction: column;
+}
+
+footer button {
+  padding: 15px 40px;
+  height: 56px;
+  background: #FF5374;
+  border-radius: 20px;
+  border: none;
+
+  font-family: 'Staatliches';
+  font-size: 20px;
+  line-height: 26px; 
+  color: #FFFFFF;
+
+  text-transform: uppercase;
+}
+
+footer button:hover {
+  background: #f52e56;
+}

@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+ font-size: 62.5%;
+ --bg-primary: #000000;
+ --bg-thead: #092D38;
+ --bg-tr-primary: rgba(6, 22, 27, 0.5);;
+ --bg-tr-secondary: #06181C;
+ --bg-input-search: #06181C;
+ --bg-btn-fav: #065E7C;
+ --bg-btn-fav-slc: #FFFFFF;
+ --ff-primary: 'Roboto', sans-serif;
+ --fc-primary: #E1E1E6;
+ --fc-btn-fav: #FFFFFF;
+ --fc-bnt-fav-slc: #065E7C;
+ --fc-bnt-rmv: #F75A68;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--bg-primary);
+  color: var(--fc-primary);
+  font-family: var(--ff-primary);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app {
+  padding: 2rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8.7rem;
+}
+
+header .search {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+header .search input {
+  padding: 1.6rem;
+  gap: 10px;
+  width: 462px;
+  background: var(--bg-input-search);
+  border-radius: 5px;
+  border: none;
+}
+
+header .search button {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  padding: 1.2rem 3.2rem ;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  background: var(--bg-btn-fav);
+  border-radius: 5px;
+  color: var(--fc-btn-fav);
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+header .search button:hover {
+  background-color: var(--bg-btn-fav-slc);
+  color: var(--fc-bnt-fav-slc);
+}
+
+header .search button:hover svg path {
+  fill: var(--bg-btn-fav);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #4A808C;
+  border-radius: 1.2rem;
+}
+
+table * {
+  font-size: 2.0rem;
+  color: var(--fc-primary);
+}
+
+table th {
+  background: var(--bg-thead);
+  text-align: left;
+  padding: 2.8rem 4rem;
+}
+
+table th:first-child {
+  border-top-left-radius: .4rem;
+}
+
+table th:last-child {
+  border-top-right-radius: .4rem;
+}
+
+table tr:nth-child(even) {
+  background: var(--bg-tr-secondary);
+}
+
+table tr:nth-child(odd) {
+  background: var(--bg-tr-primary);
+}
+
+table td {
+  padding: 2.4rem 4rem;
+  text-align: left;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+td.user img {
+  width: 5.6rem;
+  height: 5.6rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user a p {
+  font-weight: bold;
+}
+
+td .remove {
+  font-weight: 700;
+  line-height: 160%;
+  color: var(--fc-bnt-rmv);
+  background: none;
+  border: none;
+  cursor: pointer;
+}

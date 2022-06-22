@@ -1,0 +1,252 @@
+:root {
+  font-size:62.5%;
+
+  /* VARIAVEIS */
+  /* FONTE */
+  --fs-body: 1.6rem;
+  --ff-heading: 'Staatliches', cursive;
+  --ff-p: font-family: 'Palanquin', sans-serif;
+  --ff-secondary: font-family: 'Roboto', sans-serif;
+  --ff-footer: font-family: 'Open Sans', sans-serif;
+
+  /* CORES */
+  --bg-primary: #EFF1FF;
+  --bg-header-primary: #8E9AAF;
+  --bg-header-secundary: #CBC0D3;
+  --bg-card-title: #FEEAFA;
+  --cl-card-text: #4A4E69;
+  --cl-white: #FFF;
+  --cl-black: #23053A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--fs-body);
+  background-color: var(--bg-primary);
+}
+
+.page {
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.page::before  {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--bg-header-primary);
+  height: 27.9rem;
+  width: 100vw;
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0 4rem 0;
+  width: 100vw;
+}
+
+
+header h1 {
+  font-family: 'Staatliches', cursive;
+  text-align: center;
+  line-height: 5rem;
+  letter-spacing: 0.05em;
+  color:  var(--tc-primary);
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  background-color: var(--bg-header-secundary);
+  width: 100%;
+}
+
+header p {
+  font-family: 'Palanquin';
+  font-size: var(--ff-p);
+  line-height: 2.0rem;
+  padding: 4rem 3rem 0;
+  color: var(--cl-black);
+  margin-bottom: 6.3rem;
+  padding: 4rem 8rem 0;
+}
+
+main {
+  display: grid;
+  gap: 3.2rem;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  padding: 0 3.2rem;
+}
+
+main .card {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  animation: topdown 900ms;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 2.0rem;
+}
+
+
+
+main .card p {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  font-family: var(--ff-heading);
+  color: var(--cl-card-text);
+  font-size: 2rem;
+  line-height: 3.4px;
+  letter-spacing: 0.05rem;
+  background-color: var(--bg-card-title);
+  width: fit-content;
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 2rem;
+  padding: 0 2.4rem;
+
+  animation: downtop 700ms 350ms reverse backwards;
+}
+
+footer {
+  display: none;
+  font-family: var(--ff-footer);
+  line-height: 2.4rem;
+  text-align: center;
+  grid-column: 2/3;
+  font-family: var(--ff-footer);
+  color: var(--cl-card-text);
+  font-size: 1.4rem;
+}
+
+footer a {
+  
+  text-decoration: none;
+  color: var(--cl-card-text);
+  font-weight: bold;
+  
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  100% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .card img {
+    height: 40rem;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 930px) {
+  body {
+    width: 100vw;
+    
+  }
+  .page {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .page::before {
+    min-height: 100%;
+    max-width: 37.0vw;
+  }
+  
+  
+  header {
+    max-width: 37.0vw;
+    height: 100%;
+  }
+  
+  header p {
+    font-family: var(--ff-secondary);
+    font-size: 2.4rem;
+    line-height: 2.0rem;
+    color: var(--cl-white);
+  }
+  
+  
+  main {
+    padding-top: 6.4rem;
+    width: 60vw;
+    height: 90%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    'A B C'
+    'D B F'
+    'D E F'
+    
+  }
+  
+  main div:nth-child(1) {
+    grid-area: A;
+  }
+  main div:nth-child(2) {
+    grid-area: B;
+  }
+  main div:nth-child(3) {
+    grid-area: C;
+  }
+  main div:nth-child(4) {
+    grid-area: D;
+  }
+  main div:nth-child(5) {
+    grid-area: E;
+  }
+  main div:nth-child(6) {
+    grid-area: F;
+  } 
+  
+  
+  main .card img {
+    height: auto;
+    min-height: 21rem;
+  }
+
+  main .card p {
+    display: none;
+  }
+
+  main footer {
+    margin-top: 2rem;
+    text-align: center;
+    display: block;
+  }
+}
