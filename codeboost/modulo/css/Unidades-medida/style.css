@@ -1,0 +1,32 @@
+* {
+  color: #FFF;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #050110;
+}
+
+h1{
+  font-size: 72px;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+section{
+  font-size: 18px;
+}
+
+section h1 {
+  font-size: 2em;
+}
+
+section p {
+  font-size: 1em;
+}

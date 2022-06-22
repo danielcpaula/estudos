@@ -1,0 +1,24 @@
+{
+	"version": 3,
+	"file": "main.css",
+	"sources": [
+		"../scss/main.scss",
+		"../scss/_reset.scss",
+		"../scss/_mixins.scss",
+		"../scss/_responsive.scss",
+		"../scss/_buttons.scss",
+		"../scss/_variables.scss",
+		"../scss/_home.scss"
+	],
+	"sourcesContent": [
+		"@import'reset';\r\n@import 'mixins';\r\n@import'responsive';\r\n@import'buttons';\r\n@import 'variables';\r\n@import 'home';\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+		"* {\r\n  margin: 0;\r\n  padding: 0;\r\n}",
+		"@mixin flex-element($align, $justify, $direction) {\r\n  display: flex;\r\n  align-items: $align;\r\n  justify-content: $justify;\r\n  flex-direction: $direction;\r\n}\r\n\r\n@mixin style-btn($largura, $autura) {\r\n  width: $largura;\r\n  height:  $autura;\r\n  background-color: pink;\r\n  color: black;\r\n  font-weight: bold;\r\n  font-size: 2rem;\r\n  border-radius: 5px;\r\n  @include flex-element(center,center ,row);\r\n}\r\n\r\n@mixin reponsive($screenWidth) {\r\n  @media (max-width: $screenWidth) {\r\n    @content;\r\n  }\r\n}\r\n",
+		"@media (max-width: 1200px) {\r\n  h1 {\r\n    font-size: 2rem;\r\n  }\r\n}",
+		".btn-primary {\r\n  background-color: red;\r\n}\r\n",
+		"$main-color : black;\r\n$second-color : blue;\r\n$color-text : #FFF;\r\n",
+		"header {\r\n  width: 100%;\r\n  height: 80px;\r\n  background-color: $main-color;\r\n  color: $second-color;\r\n}\r\n\r\n.s-hero {\r\n  background-color: $main-color;\r\n  height: 800px;\r\n  height: 800px;\r\n  .text {\r\n    h1 {\r\n      color: $second-color;\r\n    }\r\n    p {\r\n      color: $color-text;\r\n    }\r\n  }\r\n  .img {\r\n    width: 100px;\r\n    height: 100px;\r\n    background-color: blue;\r\n  }\r\n  @include reponsive(1200px) {\r\n    .text {\r\n      h1 {\r\n        height: 70px;\r\n      }\r\n    }\r\n    \r\n  }\r\n  @include reponsive(480px){\r\n    .text {\r\n      flex-direction: row;\r\n    }\r\n  }\r\n}\r\n\r\n.s-hero {\r\n  button {\r\n    margin-top: 50px;\r\n    background-color: aqua;\r\n    border: none;\r\n    padding: 20px;\r\n    font-size: 32px;\r\n    color: white;\r\n    border-radius: 5px;\r\n    cursor: pointer;\r\n    &:hover {\r\n      background-color: rgb(9, 179, 179);\r\n    }\r\n  }\r\n}\r\n\r\n.first-section {\r\n  .btn {\r\n    @include style-btn(350px, 350px);\r\n  }\r\n}\r\n\r\n.second-section {\r\n  .btn {\r\n    @include style-btn(250px, 250px);\r\n  }\r\n}\r\n\r\n"
+	],
+	"names": [],
+	"mappings": ";ACAA,AAAA,CAAC,CAAC;EACA,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACX;;AEHD,MAAM,EAAE,SAAS,EAAE,MAAM;;EACvB,AAAA,EAAE,CAAC;IACD,SAAS,EAAE,IAAI;GAChB;;;;ACHH,AAAA,YAAY,CAAC;EACX,gBAAgB,EAAE,GAAG;CACtB;;;AEFD,AAAA,MAAM,CAAC;EACL,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,gBAAgB,EDHJ,KAAK;ECIjB,KAAK,EDHS,IAAI;CCInB;;;AAED,AAAA,OAAO,CAAC;EACN,gBAAgB,EDRJ,KAAK;ECSjB,MAAM,EAAE,KAAK;EACb,MAAM,EAAE,KAAK;CA2Bd;;;AA9BD,AAKI,OALG,CAIL,KAAK,CACH,EAAE,CAAC;EACD,KAAK,EDZK,IAAI;CCaf;;;AAPL,AAQI,OARG,CAIL,KAAK,CAIH,CAAC,CAAC;EACA,KAAK,EDdG,IAAI;CCeb;;;AAVL,AAYE,OAZK,CAYL,IAAI,CAAC;EACH,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,gBAAgB,EAAE,IAAI;CACvB;;AJJD,MAAM,EAAE,SAAS,EAAE,MAAM;;EIZ3B,AAmBM,OAnBC,CAkBH,KAAK,CACH,EAAE,CAAC;IACD,MAAM,EAAE,IAAI;GACb;;;AJTL,MAAM,EAAE,SAAS,EAAE,KAAK;;EIZ1B,AA0BI,OA1BG,CA0BH,KAAK,CAAC;IACJ,cAAc,EAAE,GAAG;GACpB;;;;AAIL,AACE,OADK,CACL,MAAM,CAAC;EACL,UAAU,EAAE,IAAI;EAChB,gBAAgB,EAAE,IAAI;EACtB,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,KAAK;EACZ,aAAa,EAAE,GAAG;EAClB,MAAM,EAAE,OAAO;CAIhB;;;AAbH,AAUI,OAVG,CACL,MAAM,AASH,MAAM,CAAC;EACN,gBAAgB,EAAE,OAAgB;CACnC;;;AAIL,AACE,cADY,CACZ,IAAI,CAAC;EJhDL,KAAK,EIiDgB,KAAK;EJhD1B,MAAM,EIgDsB,KAAK;EJ/CjC,gBAAgB,EAAE,IAAI;EACtB,KAAK,EAAE,KAAK;EACZ,WAAW,EAAE,IAAI;EACjB,SAAS,EAAE,IAAI;EACf,aAAa,EAAE,GAAG;EAblB,OAAO,EAAE,IAAI;EACb,WAAW,EAaW,MAAM;EAZ5B,eAAe,EAYc,MAAM;EAXnC,cAAc,EAWuB,GAAG;CI2CvC;;;AAGH,AACE,eADa,CACb,IAAI,CAAC;EJtDL,KAAK,EIuDgB,KAAK;EJtD1B,MAAM,EIsDsB,KAAK;EJrDjC,gBAAgB,EAAE,IAAI;EACtB,KAAK,EAAE,KAAK;EACZ,WAAW,EAAE,IAAI;EACjB,SAAS,EAAE,IAAI;EACf,aAAa,EAAE,GAAG;EAblB,OAAO,EAAE,IAAI;EACb,WAAW,EAaW,MAAM;EAZ5B,eAAe,EAYc,MAAM;EAXnC,cAAc,EAWuB,GAAG;CIiDvC"
+}

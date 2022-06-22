@@ -1,0 +1,22 @@
+{
+	"version": 3,
+	"file": "main.css",
+	"sources": [
+		"../scss/main.scss",
+		"../scss/_reset.scss",
+		"../scss/_variables.scss",
+		"../scss/_mixins.scss",
+		"../scss/_grid.scss",
+		"../scss/_home.scss"
+	],
+	"sourcesContent": [
+		"@import 'reset';\r\n@import 'variables';\r\n@import 'mixins';\r\n@import 'grid';\r\n@import 'home';\r\n",
+		"* {\r\n  margin: 0;\r\n  padding: 0;\r\n}",
+		"",
+		"",
+		"",
+		""
+	],
+	"names": [],
+	"mappings": ";ACAA,AAAA,CAAC,CAAC;EACA,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACX"
+}

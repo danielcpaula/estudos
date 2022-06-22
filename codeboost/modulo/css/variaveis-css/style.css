@@ -1,0 +1,16 @@
+:root {
+  --color-red: red;
+  --color-blue: blue;
+}
+
+section {
+  width: 100%;
+  height: 500px;
+  background-color: var(--color-red);
+}
+
+section .square {
+  width: 200px;
+  height: 200px;
+  background-color: var(--color-blue);
+}

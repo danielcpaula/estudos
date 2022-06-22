@@ -1,0 +1,36 @@
+html {
+  font-size: 62.5%; /*Todo noavegador padrão 16px --> 62.5% === 10px x*/
+}
+.text {
+  width: 100%;
+  max-width: 800px;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+/*Media queries padrão*/
+@media (max-width: 1200px) {
+  
+}
+
+@media (max-width: 991px) {
+  
+}
+
+@media (max-width: 600px) {
+  
+}
+
+@media (max-width: 480px) {
+  
+}
+
+

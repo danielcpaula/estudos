@@ -1,0 +1,23 @@
+@mixin flex-element($align, $justify, $direction) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+
+@mixin style-btn($largura, $autura) {
+  width: $largura;
+  height:  $autura;
+  background-color: pink;
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+  border-radius: 5px;
+  @include flex-element(center,center ,row);
+}
+
+@mixin reponsive($screenWidth) {
+  @media (max-width: $screenWidth) {
+    @content;
+  }
+}

@@ -1,0 +1,26 @@
+body {
+  background-color: #000000;
+}
+
+h1{
+  color: #ffffff;
+}
+
+p{
+  color: #FFFFFF;
+  max-width: 400px;
+}
+
+button{
+  background-color: blue;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
+.div-direita button {
+  background-color: green;
+}
+
+.div-esquerda button {
+  background-color: red;
+}
