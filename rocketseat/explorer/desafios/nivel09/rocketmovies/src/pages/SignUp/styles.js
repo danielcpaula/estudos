@@ -1,29 +1,26 @@
-import styled from 'styled-components'
-import backgroundImg from '../../assets/backgroundSign.png'
+import styled from "styled-components";
+import backgroundImg from "../../assets/background.png";
 
-export const Container = styled.div `
+export const Container = styled.div`
   height: 100vh;
-
   display: flex;
   align-items: stretch;
-`
+`;
 
-export const Form = styled.form `
-  padding: 0 163px;
-
+export const Form = styled.form`
+  padding: 0 136px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-
-  text-align: center;
+  align-items: left;
+  text-align: left;
 
   > h1 {
     font-size: 48px;
-    color: ${({ theme }) => theme.COLORS.ROSE};
+    color: ${({ theme }) => theme.COLORS.PINK};
   }
 
-  h2 {
+  > h2 {
     font-size: 24px;
     margin: 48px 0;
   }
@@ -34,22 +31,16 @@ export const Form = styled.form `
   }
 
   > a {
-    display: flex;
-    align-items: center;
-    
     margin-top: 42px;
-    color: ${({ theme }) => theme.COLORS.ROSE};
-
-    svg {
-      font-size: 20px;
-      margin-right: 8px;
-    }
+    color: ${({ theme }) => theme.COLORS.PINK};
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
-`
+`;
 
-export const Background = styled.div `
+export const Background = styled.div`
   flex: 1;
   background: url(${backgroundImg}) no-repeat center center;
   background-size: cover;
-  opacity: 0.3;
-`
+`;

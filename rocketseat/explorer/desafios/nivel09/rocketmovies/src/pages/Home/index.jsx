@@ -1,31 +1,57 @@
-import { FiPlus, FiSearch } from 'react-icons/fi'
+import { Container, Content } from "./styles";
 import { Header } from "../../components/Header";
-import { Button } from "../../components/Button"
-import { Film } from "../../components/Film"
-import { Container, Content, Section } from "./styles";
+import { Button } from "../../components/Button";
+import { Section } from "../../components/Section";
+import { Note } from "../../components/Note";
+
+import { Link } from "react-router-dom";
 
 export function Home() {
-  return(
+  return (
     <Container>
       <Header />
-      <Content>
-        <Section>
-          <div className="header">
-            <h2>Meus filmes</h2>
-            <Button 
-              className="btn-header"
-              title="Adicionar filme"
-            />
-          </div>
-          <Film data={{
-            title: 'Interestellar',
-            description: 'Pragas nas colheitas fizeram a civilização humana regredir para uma sociedade agrária em futuro de data desconhecida. Cooper, ex-piloto da NASA, tem uma fazenda com sua família. Murphy, a filha de dez anos de Cooper, acredita que seu quarto está assombrado por um fantasma que tenta se ',
-             stars : 1 
-          }}
-          />
 
-        </Section>
+      <Content>
+        <header>
+          <Section title="Meus Filmes" />{" "}
+          <Link to="/new">
+            <Button title="+ Adicionar filme" />
+          </Link>
+        </header>
+
+        <Note
+          data={{
+            title: "InterEstelar",
+            tags: [
+              { id: "1", name: "Ficição Cientifica" },
+              { id: "2", name: "Drama" },
+              { id: "2", name: "Familia" },
+            ],
+            rating: "0",
+          }}
+        />
+        <Note
+          data={{
+            title: "Jumanji",
+            tags: [
+              { id: "1", name: "Ficção" },
+              { id: "2", name: "Aventura" },
+            ],
+            rating: "4",
+          }}
+        />
+
+        <Note
+          data={{
+            title: "SpiderMan",
+            tags: [
+              { id: "1", name: "Ação" },
+              { id: "2", name: "Aventura" },
+            ],
+            rating: "5",
+          }}
+        />
       </Content>
     </Container>
-  )
+  );
 }

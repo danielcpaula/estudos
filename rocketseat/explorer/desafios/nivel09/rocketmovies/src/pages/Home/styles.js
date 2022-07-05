@@ -1,30 +1,32 @@
 import styled from "styled-components";
 
-export const Container = styled.div `
+import { Link } from "react-router-dom";
+
+export const Container = styled.div`
   width: 100%;
   height: 100vh;
-`
+  display: grid;
+  grid-template-columns: 250px auto;
 
-export const Content = styled.div `
-  padding: 0 123px;
-  margin-top: 47px;
-`
+  grid-template-areas:
+    " header header"
+    "content content";
 
-export const Section = styled.section `
-  > .header {
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+`;
+
+export const Content = styled.div`
+  grid-area: content;
+  padding: 0 124px;
+  overflow-y: scroll;
+
+  > header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    text-align: center;
-
-    > h2 {
-      font-size: 32px;
-      line-height: 42px;
-      font-weight: 400;
-    }
-
-    > .btn-header {
-      width: 207px;
+    flex-direction: row;
+    justify-content: space-between;
+    > button {
+      width: 210px;
     }
   }
-`
+`;
